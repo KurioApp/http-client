@@ -1,0 +1,14 @@
+{
+    "name" : "KurioApp/http-client",
+    "autoload" : {
+        "psr-4" : {
+            "Kurio\\HttpClient\\": "src"
+        }
+    },
+    "require" : {
+        "egeloen/http-adapter": "dev-master#4f35c0e49ed242ddae5c3b16b2514eaad6e8723d@dev",
+        "illuminate/support": "5.1.*",
+        "guzzlehttp/guzzle": "5.*",
+        "symfony/event-dispatcher": "^2.0"
+    }
+}
