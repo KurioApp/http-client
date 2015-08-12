@@ -6,7 +6,7 @@
         }
     },
     "require" : {
-        "egeloen/http-adapter": "@dev",
+        "egeloen/http-adapter": "0.8.*",
         "illuminate/support": "5.1.*",
         "guzzlehttp/guzzle": "5.*",
         "symfony/event-dispatcher": "^2.0"
