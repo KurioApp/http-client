@@ -24,7 +24,7 @@ class HttpServiceProvider extends ServiceProvider
      */
     protected function getHttpAdapter()
     {
-        $preferred_library = 'guzzle_http';
+        $preferred_library = HttpAdapterFactory::GUZZLE6;
         return HttpAdapterFactory::guess($preferred_library);
     }
 
