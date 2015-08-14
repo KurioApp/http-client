@@ -3,8 +3,9 @@ namespace Kurio\HttpClient;
 
 use Illuminate\Support\ServiceProvider;
 use Ivory\HttpAdapter\Event\Subscriber\RedirectSubscriber;
-use Ivory\HttpAdapter\HttpAdapterFactory;
 use Ivory\HttpAdapter\EventDispatcherHttpAdapter;
+use Ivory\HttpAdapter\HttpAdapterFactory;
+use Ivory\HttpAdapter\HttpAdapterInterface;
 use Ivory\HttpAdapter\PsrHttpAdapterInterface;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
@@ -15,8 +16,11 @@ class HttpServiceProvider extends ServiceProvider
         $http_adapter = $this->getHttpAdapter();
         $event_dispatcher = $this->getEventDispatcher();
 
-        $http = new EventDispatcherHttpAdapter($http_adapter, $event_dispatcher);
-        $this->app->bind('http', $http);
+        $this->app->bind(HttpAdapterInterface::class, function () use ($http_adapter, $event_dispatcher) {
+            return new EventDispatcherHttpAdapter($http_adapter, $event_dispatcher);
+        });
+
+        $this->app->bind('http', HttpAdapterInterface::class);
     }
 
     /**
