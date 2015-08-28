@@ -8,7 +8,9 @@
     "require" : {
         "egeloen/http-adapter": "0.8.*",
         "illuminate/support": "5.1.*",
-        "guzzlehttp/guzzle": "6.*",
         "symfony/event-dispatcher": "^2.0"
+    },
+    "suggest" : {
+        "guzzlehttp/guzzle": "PSR-7 compatible Guzzle client"
     }
 }
