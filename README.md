@@ -9,7 +9,7 @@ This library is using [Composer](https://getcomposer.org/) as dependency manager
 ```json
 {
     "require" : {
-        "KurioApp/http-client" : "0.1.*"
+        "KurioApp/http-client" : "0.3.2"
     },
     "repositories" : [
         {
