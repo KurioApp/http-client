@@ -7,7 +7,7 @@
     },
     "require" : {
         "egeloen/http-adapter": "0.8.*",
-        "illuminate/support": "5.1.*",
+        "illuminate/support": "5.1.x|5.2.x",
         "symfony/event-dispatcher": "^2.0"
     },
     "suggest" : {
